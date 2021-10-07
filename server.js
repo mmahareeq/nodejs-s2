@@ -94,7 +94,7 @@ app.delete("/users/:id",(req,res)=>
         reset.sendStatus(204);
     }
 })
-app.delete("/users/:id",(req,res)=>
+app.delete("/children/:id",(req,res)=>
 {
     const id = req.params.id;
     const result = data.children.find(child=>child.id == id);
