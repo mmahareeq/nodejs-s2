@@ -1,0 +1,28 @@
+1) Write at most 3 lines about “What is an HTTP Header ?”.
+let the client and the server pass additional information with an HTTP request or response.define as:
+Host:value
+Headers can be grouped according to their contexts:
+General headers:additional information about request/response,used for both request and responses , but don't apply to the content it self
+Request header: additional information about request, and it doesn't relate to the content of the message
+Response header :additional information about response,and it doesn't relate to the content of the message
+Entity headers :contain info about the body of resource,http header that are used in an http request or response to describe content of the message
+2) Write at most 3 lines about “What is Content-Type header ?”
+The Content-Type header is used to indicate the media type of the resource. The media type is a string sent along with the file indicating the format of the file. For example, for image file its media type will be like image/png or image/jpg
+
+3) Write at most 2 lines about “What is REST api?” and what are its constraints ?
+REST is a set of architectural constraints, not a protocol or a standard. API developers can implement REST in a variety of ways, is an application programming interface (API or web API) that conforms to the constraints of REST architectural style and allows for interaction with RESTful web services. REST stands for representational state transfer
+
+what are its constraints:
+
+Uniform Interface
+Stateless
+Cacheable
+Client-Server
+Layered System
+Code on Demand
+
+
+
+
+
+ 
