@@ -62,20 +62,17 @@ app.post("/users",(req,res)=>{
 }); 
 app.post("/children",(req,res)=>{
     const body = req.body;
-    const r = Object.values(body).includes(null)
-    
-    if(r){res.status(409).json({msg:" missing data"});}
-    else
-    {
-    const result = data.children.find(child =>child.id == body.id);
-    if(!result )
+  
+    const result = data.children.find(child =>child.id !== body.id );
+    const id_p = data.users.find(user=>user.id !== body.parent_id) 
+    if(!result && !id_p)
     {   
-        res.status(409).json({msg:"Id already exists",r:r});
+        res.status(409).json({msg:"Id already exists or ID Parend isn't exist",r:r});
     }
     else{
         data.users.push(body);
         res.status(201).json(body);
-    }}
+    }
 }); 
 app.delete("/users/:id",(req,res)=>
 {
